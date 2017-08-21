@@ -76,7 +76,7 @@ if(!empty($template_files_list)) {
         $current_module_destination = str_replace('{MODULENAME}', $module, $template_destination_folder);
         foreach($template_files_list as $fileRel => $fileReal) {
             // build destination
-            $destination_folder = 'src' . DIRECTORY_SEPARATOR . dirname($current_module_destination) . DIRECTORY_SEPARATOR . dirname($fileRel) . DIRECTORY_SEPARATOR;
+            $destination_folder = 'src' . DIRECTORY_SEPARATOR . $current_module_destination . DIRECTORY_SEPARATOR . dirname($fileRel) . DIRECTORY_SEPARATOR;
             
             if(!is_dir($destination_folder)) {
                 mkdir($destination_folder, 0777, true);
