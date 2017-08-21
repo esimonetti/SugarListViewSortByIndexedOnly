@@ -153,7 +153,7 @@ function getFiles(RecursiveIteratorIterator $files, $basePath) {
         foreach ($files as $name => $file) {
             if ($file->isFile()) {
                 $fileReal = $file->getRealPath();
-                if(!in_array($file->getFilename(), array('.DS_Store'))) {
+                if(!in_array($file->getFilename(), array('.DS_Store', '.gitkeep'))) {
                     $fileRelative = '' . str_replace($basePath . '/', '', $fileReal);
                     $result[$fileRelative] = $fileReal;
                 }
