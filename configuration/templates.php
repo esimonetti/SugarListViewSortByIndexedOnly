@@ -1,7 +1,7 @@
 <?php
 
 $templates['template'] = array(
-    'folder_pattern' => 'custom/Extension/modules/{MODULENAME}/Ext/clients/base',
+    'directory_pattern' => 'custom/Extension/modules/{MODULENAME}/Ext/clients/base',
     'modules' => array(
         'Accounts' => 'Account',
         'Bugs' => 'Bug',
